@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BookMyShow Style Ticket Booking</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Step Indicator -->
+    <div class="step-indicator">
+      <div class="step active" id="indicator-step1">1. Select Movie</div>
+      <div class="step" id="indicator-step2">2. Choose Seats</div>
+      <div class="step" id="indicator-step3">3. Confirmation</div>
+    </div>
+
+    <!-- Step 1: Movie Selection -->
+    <section id="step1" class="step-section">
+      <h2>Select Movie & Details</h2>
+      <label>Movie:
+        <select id="movie">
+        <option value="avengers">Avengers: Endgame</option>
+          <option value="oppenheimer">Oppenheimer</option>
+          <option value="barbie">Barbie</option>
+          <option value="dune">Dune: Part Two</option>
+          <option value="insideout2">Inside Out 2</option>
+          <option value="godzilla">Godzilla x Kong</option>
+          <option value="fastx">Fast X</option>
+        </select>
+      </label>
+      <label>Language:
+        <select id="language">
+          <option value="english">English</option>
+          <option value="hindi">Hindi</option>
+          <option value="tamil">Tamil</option>
+          <option value="telugu">Telugu</option>
+        </select>
+      </label>
+      <label>Date:
+        <input type="date" id="date">
+      </label>
+      <label>Time Slot:
+        <select id="time">
+          <option value="10:00 AM">10:00 AM</option>
+          <option value="1:00 PM">1:00 PM</option>
+          <option value="4:00 PM">4:00 PM</option>
+          <option value="7:00 PM">7:00 PM</option>
+          <option value="10:00 PM">10:00 PM</option>
+        </select>
+      </label>
+      <label>Number of Tickets:
+        <input type="number" id="tickets" min="1" max="5" value="1">
+      </label>
+      <button id="nextBtn">Next</button>
+    </section>
+
+    <!-- Step 2: Seat Selection -->
+    <section id="step2" class="step-section hidden">
+      <h2>Select Your Seats</h2>
+      <div class="seats" id="seats"></div>
+      <button id="confirmBtn">Confirm Booking</button>
+    </section>
+
+    <!-- Step 3: Confirmation -->
+    <section id="step3" class="step-section hidden">
+      <h2>Booking Confirmed! 🎉</h2>
+      <div id="confirmation" class="confirmation"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
